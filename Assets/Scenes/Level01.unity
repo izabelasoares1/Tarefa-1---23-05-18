@@ -4781,18 +4781,6 @@ CompositeCollider2D:
         Y: -20000000
       - X: 335000000
         Y: -20000000
-    - - X: 85000000
-        Y: -5195312
-      - X: 84843752
-        Y: -5000000
-      - X: 70156248
-        Y: -5000000
-      - X: 70000000
-        Y: -5234375
-      - X: 70000000
-        Y: -15000000
-      - X: 85000000
-        Y: -15000000
     - - X: 25000000
         Y: -15195312
       - X: 24843750
@@ -4823,6 +4811,18 @@ CompositeCollider2D:
         Y: -20000000
       - X: 25000000
         Y: -20000000
+    - - X: 85000000
+        Y: -5195312
+      - X: 84843752
+        Y: -5000000
+      - X: 70156248
+        Y: -5000000
+      - X: 70000000
+        Y: -5234375
+      - X: 70000000
+        Y: -15000000
+      - X: 85000000
+        Y: -15000000
     - - X: 265000000
         Y: -8222656
       - X: 265000000
@@ -4992,12 +4992,6 @@ CompositeCollider2D:
       - {x: 33, y: -0.0234375}
       - {x: 33, y: -2}
       - {x: 33.5, y: -2}
-    - - {x: 8.5, y: -0.5195312}
-      - {x: 8.484375, y: -0.5}
-      - {x: 7.015625, y: -0.5}
-      - {x: 7, y: -0.5234375}
-      - {x: 7, y: -1.5}
-      - {x: 8.5, y: -1.5}
     - - {x: 2.5, y: -1.5195312}
       - {x: 2.484375, y: -1.5}
       - {x: 2, y: -1.5}
@@ -5013,6 +5007,12 @@ CompositeCollider2D:
       - {x: 1.5, y: -1.5}
       - {x: 1.5, y: -2}
       - {x: 2.5, y: -2}
+    - - {x: 8.5, y: -0.5195312}
+      - {x: 8.484375, y: -0.5}
+      - {x: 7.015625, y: -0.5}
+      - {x: 7, y: -0.5234375}
+      - {x: 7, y: -1.5}
+      - {x: 8.5, y: -1.5}
     - - {x: 26.5, y: -0.8222656}
       - {x: 26.5, y: -0.5800781}
       - {x: 26.476564, y: -0.56835943}
@@ -5100,9 +5100,11 @@ GameObject:
   - component: {fileID: 1154131872}
   - component: {fileID: 1154131871}
   - component: {fileID: 1154131874}
-  m_Layer: 0
+  - component: {fileID: 1154131876}
+  - component: {fileID: 1154131875}
+  m_Layer: 11
   m_Name: Girl
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5206,6 +5208,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65319633, y: 1.2155594}
   m_EdgeRadius: 0
+--- !u!114 &1154131875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154131870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ccdca9a34f67442b0245593ee9409e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: 10
+--- !u!50 &1154131876
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154131870}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1374273701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,7 +5437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1154131873}
   damping: 1
   lookAheadFactor: 3
   lookAheadReturnSpeed: 0.5
