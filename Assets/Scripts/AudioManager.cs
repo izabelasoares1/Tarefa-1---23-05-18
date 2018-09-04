@@ -24,4 +24,8 @@ public void PlayJumpSound(GameObject obj){
 	AudioSource.PlayClipAtPoint(audioPlayer.jump, obj.transform.position);
 }
 
+public void PlayFailSound(GameObject obj){
+	AudioSource.PlayClipAtPoint(audioSFX.fail, obj.transform.position);
+}
+
 }
